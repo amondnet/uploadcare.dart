@@ -3,7 +3,7 @@ import 'cdn_path_builder.dart';
 class Urls {
   static final String _API_BASE = 'api.uploadcare.com';
   static final String _CDN_BASE = 'ucarecdn.com';
-  static final String _UPLOAD_BASE = 'https://upload.uploadcare.com';
+  static final String _UPLOAD_BASE = 'upload.uploadcare.com';
 
   /// parses a URL to a project resource.
   ///
@@ -59,7 +59,7 @@ class Urls {
   ///
   /// @see com.uploadcare.upload.UrlUploader
   static Uri uploadFromUrl(String sourceUrl, String pubKey, String store) {
-    return Uri.http(_UPLOAD_BASE, '/from_url/',
+    return Uri.https(_UPLOAD_BASE, '/from_url/',
         {'source_url': sourceUrl, 'pub_key': pubKey, 'store': store});
   }
 
@@ -69,6 +69,6 @@ class Urls {
   ///
   /// @see com.uploadcare.upload.UrlUploader
   static Uri uploadFromUrlStatus(String token) {
-    return Uri.http(_UPLOAD_BASE, '/from_url/status/', {'token': token});
+    return Uri.https(_UPLOAD_BASE, '/from_url/status/', {'token': token});
   }
 }
