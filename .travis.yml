@@ -1,0 +1,67 @@
+# Created with package:mono_repo v2.3.0
+language: dart
+
+jobs:
+  include:
+    - stage: analyze
+      name: "SDK: 2.8.1; PKG: uploadcare; TASKS: `dartanalyzer .`"
+      dart: "2.8.1"
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh dartanalyzer
+    - stage: analyze
+      name: "SDK: stable; PKG: uploadcare; TASKS: `dartanalyzer .`"
+      dart: stable
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh dartanalyzer
+    - stage: analyze
+      name: "SDK: 2.8.1; PKG: uploadcare; TASKS: `dartfmt -n --set-exit-if-changed .`"
+      dart: "2.8.1"
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh dartfmt
+    - stage: analyze
+      name: "SDK: stable; PKG: uploadcare; TASKS: `dartfmt -n --set-exit-if-changed .`"
+      dart: stable
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh dartfmt
+    - stage: build
+      name: "SDK: 2.8.1; PKG: uploadcare; TASKS: `pub run build_runner build --delete-conflicting-outputs`"
+      dart: "2.8.1"
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh command
+    - stage: build
+      name: "SDK: stable; PKG: uploadcare; TASKS: `pub run build_runner build --delete-conflicting-outputs`"
+      dart: stable
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh command
+    - stage: unit_test
+      name: "SDK: 2.8.1; PKG: uploadcare; TASKS: `pub run test`"
+      dart: "2.8.1"
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh test
+    - stage: unit_test
+      name: "SDK: stable; PKG: uploadcare; TASKS: `pub run test`"
+      dart: stable
+      os: linux
+      env: PKGS="uploadcare"
+      script: ./tool/travis.sh test
+
+stages:
+  - analyze
+  - build
+  - unit_test
+
+# Only building master means that we don't run two builds for each pull request.
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - "$HOME/.pub-cache"
