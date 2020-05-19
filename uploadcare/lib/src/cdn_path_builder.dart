@@ -46,7 +46,7 @@ class CdnPathBuilder {
   }
 
   void dimensionGuard(int dim) {
-    if (dim < 1 || dim > 2048) {
+    if (dim < 1 || dim > 5000) {
       throw Exception('Dimensions must be in the range 1-2048');
     }
   }
@@ -54,9 +54,10 @@ class CdnPathBuilder {
   void dimensionsGuard(int width, int height) {
     dimensionGuard(width);
     dimensionGuard(height);
+    /*
     if (width > 634 && height > 634) {
       throw Exception('At least one dimension must be less than 634');
-    }
+    }*/
   }
 
   /// Adds top-left-aligned crop.

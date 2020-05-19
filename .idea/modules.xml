@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/flutter_uploadcare/flutter_uploadcare.iml" filepath="$PROJECT_DIR$/flutter_uploadcare/flutter_uploadcare.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploadcare/uploadcare.iml" filepath="$PROJECT_DIR$/uploadcare/uploadcare.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploadcare.dart.iml" filepath="$PROJECT_DIR$/uploadcare.dart.iml" />
     </modules>

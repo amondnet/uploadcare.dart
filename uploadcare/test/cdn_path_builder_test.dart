@@ -71,12 +71,12 @@ void main() {
 
     test('dimensionGuard Test', () {
       builder.resizeWidth(1);
-      builder.resizeWidth(2048);
+      builder.resizeWidth(5000);
       try {
         builder.resizeWidth(0);
       } catch (e1) {
         try {
-          builder.resizeWidth(2049);
+          builder.resizeWidth(5001);
         } catch (e2) {
           return;
         }

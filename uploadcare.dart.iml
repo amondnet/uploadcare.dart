@@ -9,10 +9,12 @@
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/build" />
-      <excludeFolder url="file://$MODULE_DIR$/uploadcare_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_uploadcare/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare_flutter/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
