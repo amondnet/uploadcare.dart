@@ -58,11 +58,11 @@ class RequestHelper {
     } else {
       try {
         var signature = makeSignature(request, formattedDate);
-        authorization = "Uploadcare " + client.publicKey + ":" + signature;
+        authorization = 'Uploadcare ${client.publicKey} : signature';
       } catch (e) {
-        throw Exception("Error when signing the request");
+        throw Exception('Error when signing the request');
       }
     }
-    request.headers["Authorization"] = authorization;
+    request.headers['Authorization'] = authorization;
   }
 }
