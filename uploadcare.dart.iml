@@ -6,10 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_uploadcare/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare/build" />
-      <excludeFolder url="file://$MODULE_DIR$/flutter_uploadcare/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/uploadcare_flutter/build" />
     </content>

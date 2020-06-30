@@ -1,6 +1,6 @@
 import 'file.dart';
 
-enum ImageFormat { JPEG, PNG }
+enum ImageFormat { JPEG, PNG, WEBP, AUTO }
 
 extension on ImageFormat {
   String get name {
@@ -9,6 +9,10 @@ extension on ImageFormat {
         return 'jpeg';
       case ImageFormat.PNG:
         return 'png';
+      case ImageFormat.WEBP:
+        return 'webp';
+      case ImageFormat.AUTO:
+        return 'auto';
     }
     return null;
   }
@@ -233,6 +237,23 @@ class CdnPathBuilder {
     sb.write(width);
     sb.write('x');
     sb.write(height);
+    return this;
+  }
+
+  /// Returns a progressive image. In progressive images, data are compressed in
+  /// multiple passes of progressively higher detail. This is ideal for large
+  /// images that will be displayed while downloading over a slow connection
+  /// allowing a reasonable preview after receiving only a portion of the data.
+  /// The operation does not affect non-JPEG images; does not force image
+  /// formats to JPEG.
+  /// https://uploadcare.com/docs/transformations/image_transformations/#operation-progressive
+  CdnPathBuilder progressive(bool progressive) {
+    sb.write('/-/progressive/');
+    if (progressive) {
+      sb.write('yes');
+    } else {
+      sb.write('no');
+    }
     return this;
   }
 

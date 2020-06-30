@@ -2,10 +2,8 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../flutter_uploadcare">
-      <excludeFolder url="file://$MODULE_DIR$/../flutter_uploadcare/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/../flutter_uploadcare/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/../flutter_uploadcare/build" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
