@@ -1,6 +1,6 @@
 name: flutter_uploadcare
 description: Flutter integration for uploadcare.
-version: 0.0.1
+version: 0.1.0
 homepage: https://github.com/amondnet/uploadcare.dart.git
 
 environment:
@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   freezed_annotation: ^0.7.1
-  uploadcare: ^0.1.0
+  uploadcare: ^0.2.0
   flutter:
     sdk: flutter
 
