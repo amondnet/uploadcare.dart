@@ -231,12 +231,37 @@ class CdnPathBuilder {
   ///
   /// @param width New width
   /// @param height New height
-  CdnPathBuilder preview(int width, int height) {
-    dimensionsGuard(width, height);
+  CdnPathBuilder preview({int width, int height}) {
     sb.write('/-/preview/');
-    sb.write(width);
-    sb.write('x');
-    sb.write(height);
+    if (width != null) {
+      dimensionGuard(width);
+      sb.write(width);
+    }
+    if (width != null || height != null) {
+      sb.write('x');
+    }
+    if (height != null) {
+      dimensionGuard(height);
+      sb.write(height);
+    }
+    return this;
+  }
+
+  CdnPathBuilder colorRecognition({int numberOfColors}) {
+    sb.write('/-/main_colors/');
+    if (numberOfColors != null && numberOfColors > 0) {
+      sb.write(numberOfColors);
+    }
+    return this;
+  }
+
+  CdnPathBuilder fileInfoAsJson() {
+    sb.write('/-/json/');
+    return this;
+  }
+
+  CdnPathBuilder fileInfoAsJsonp() {
+    sb.write('/-/jsonp/');
     return this;
   }
 

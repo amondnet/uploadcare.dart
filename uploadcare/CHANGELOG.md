@@ -1,3 +1,7 @@
+## 0.1.2
+
+- intelligence: file information, color recognition
+
 ## 0.1.1
 
 - feat: progressive operation
