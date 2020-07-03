@@ -8,3 +8,4 @@ export 'src/file.dart';
 export 'src/client.dart';
 export 'src/models.dart';
 export 'src/urls.dart';
+export 'src/cdn_client.dart';

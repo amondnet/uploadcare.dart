@@ -11,7 +11,7 @@ void main() {
     setUp(() {
       File file = MockFile();
       when(file.fileId).thenReturn(FILE_ID);
-      builder = CdnPathBuilder(file);
+      builder = CdnPathBuilder(file.fileId);
     });
 
     test('fileUrl Test', () {

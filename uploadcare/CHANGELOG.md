@@ -1,3 +1,7 @@
+## 0.2.0
+
+- cdn client
+
 ## 0.1.2
 
 - intelligence: file information, color recognition

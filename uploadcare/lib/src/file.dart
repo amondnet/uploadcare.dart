@@ -71,6 +71,6 @@ class File {
   /// @return CDN path builder
   ///
   CdnPathBuilder cdnPath() {
-    return CdnPathBuilder(this);
+    return CdnPathBuilder(fileId);
   }
 }

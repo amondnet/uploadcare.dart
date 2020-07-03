@@ -87,7 +87,7 @@ class __$ProjectDataCopyWithImpl<$Res> extends _$ProjectDataCopyWithImpl<$Res>
 }
 
 class _$_ProjectData implements _ProjectData {
-  const _$_ProjectData(this.name, this.pubKey)
+  _$_ProjectData(this.name, this.pubKey)
       : assert(name != null),
         assert(pubKey != null);
 
@@ -123,7 +123,7 @@ class _$_ProjectData implements _ProjectData {
 }
 
 abstract class _ProjectData implements ProjectData {
-  const factory _ProjectData(String name, String pubKey) = _$_ProjectData;
+  factory _ProjectData(String name, String pubKey) = _$_ProjectData;
 
   @override
   String get name;

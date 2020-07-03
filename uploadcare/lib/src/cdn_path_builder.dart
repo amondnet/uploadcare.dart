@@ -45,8 +45,8 @@ class CdnPathBuilder {
   final StringBuffer sb = StringBuffer('/');
 
   /// Creates a new CDN path builder for some image file.
-  CdnPathBuilder(File file) {
-    sb.write(file.fileId);
+  CdnPathBuilder(String fileId) {
+    sb.write(fileId);
   }
 
   void dimensionGuard(int dim) {
@@ -231,7 +231,7 @@ class CdnPathBuilder {
   ///
   /// @param width New width
   /// @param height New height
-  CdnPathBuilder preview({int width, int height}) {
+  CdnPathBuilder preview([int width, int height]) {
     sb.write('/-/preview/');
     if (width != null) {
       dimensionGuard(width);
