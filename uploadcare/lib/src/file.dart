@@ -8,28 +8,28 @@ class File {
 
   File(this.client, this.fileData);
 
-  String get fileId => fileData.uuid;
+  String? get fileId => fileData.uuid;
 
   bool get isStored => fileData.datetimeStored != null;
 
-  String get mimeType => fileData.mimeType;
+  String? get mimeType => fileData.mimeType;
 
   bool get hasOriginalFileUrl => fileData.originalFileUrl != null;
 
-  String get originalFileUrl => fileData.originalFileUrl;
+  String? get originalFileUrl => fileData.originalFileUrl;
 
-  String get originalFileName => fileData.originalFileName;
+  String? get originalFileName => fileData.originalFileName;
 
   bool get isRemoved => fileData.datetimeRemoved != null;
 
-  DateTime get removed => fileData.datetimeRemoved;
+  DateTime? get removed => fileData.datetimeRemoved;
 
-  int get size => fileData.size;
+  int? get size => fileData.size;
 
-  DateTime get uploadDate => fileData.datetimeUploaded;
+  DateTime? get uploadDate => fileData.datetimeUploaded;
 
   /// Returns the unique REST URL for this resource
-  String get url => fileData.url;
+  String? get url => fileData.url;
 
   ///
   /// Refreshes file data from Uploadcare.
@@ -38,7 +38,7 @@ class File {
   /// @return New file resource instance
   ///
   File update() {
-    return client.getFile(fileData.uuid);
+    return client.getFile(fileData.uuid!);
   }
 
   ///

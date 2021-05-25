@@ -5,9 +5,9 @@ import 'client.dart';
 import 'file.dart';
 
 mixin Uploader {
-  File upload();
+  File? upload();
 
-  Uploader store(bool store);
+  Uploader? store(bool store);
 }
 
 class UrlUploader with Uploader {
@@ -41,6 +41,7 @@ class UrlUploader with Uploader {
   @override
   File upload([int pollingInterval = 500]) {
     // TODO: implement upload
+    throw Exception('unimplemented yet');
   }
 }
 
@@ -52,13 +53,13 @@ class FileUploader with Uploader {
   FileUploader(this.client, this.file, this.bytes);
 
   @override
-  Uploader store(bool store) {
+  Uploader? store(bool store) {
     // TODO: implement store
     return null;
   }
 
   @override
-  File upload() {
+  File? upload() {
     // TODO: implement upload
     return null;
   }

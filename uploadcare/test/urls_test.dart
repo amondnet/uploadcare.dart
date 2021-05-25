@@ -1,6 +1,5 @@
-import 'package:mockito/mockito.dart';
-import 'package:uploadcare/uploadcare.dart';
 import 'package:test/test.dart';
+import 'package:uploadcare/uploadcare.dart';
 
 void main() {
   group('Urls', () {

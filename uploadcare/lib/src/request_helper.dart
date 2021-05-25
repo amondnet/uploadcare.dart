@@ -65,4 +65,16 @@ class RequestHelper {
     }
     request.headers['Authorization'] = authorization;
   }
+
+  Future<T> executeQuery<T>(http.Request request,
+      {bool apiHeaders = false, String? requestBodyMd5}) async {
+    if (apiHeaders) {
+      setApiHeaders(request);
+    }
+
+    final response = await client.httpClient.send(request);
+    //response.stream
+    //return jsonDecode(response.body) as T;
+    throw UnimplementedError();
+  }
 }

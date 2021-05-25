@@ -1,19 +1,15 @@
-import 'dart:ui';
+import 'dart:math';
 
 import 'package:flutter/widgets.dart';
 import 'package:uploadcare/uploadcare.dart';
-export 'package:uploadcare/uploadcare.dart';
 
 int devicePixel(BuildContext context, int dimension) {
-  if (dimension == null) {
-    return null;
-  }
   var devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
   dimension = (dimension * devicePixelRatio).round();
-  if (dimension > 2048) {
-    dimension = 2048;
-  } else if (dimension < 1) {
-    dimension = 1;
+  if (dimension > MAX_DIMENSION) {
+    dimension = MAX_DIMENSION;
+  } else if (dimension < MIN_DIMENSION) {
+    dimension = MIN_DIMENSION;
   }
   return dimension;
 }
@@ -36,14 +32,22 @@ extension CdnPathBuilderExtension on CdnPathBuilder {
     return this;
   }
 
-  CdnPathBuilder resizeDevice(BuildContext context, {int width, int height}) {
-    if (width == null && height == null) {
-      return this;
-    }
+  CdnPathBuilder resizeDevice(BuildContext context,
+      {required int width, required int height}) {
     var widthPixel = devicePixel(context, width);
     var heightPixel = devicePixel(context, height);
+
+    if (widthPixel >= MAX_DIMENSION || heightPixel >= MAX_DIMENSION) {
+      var widthRatio = widthPixel / width;
+      var heightRatio = heightPixel / height;
+
+      var minRatio = min(widthRatio, heightRatio);
+      widthPixel = (width * minRatio).toInt();
+      heightPixel = (height * minRatio).toInt();
+    }
+
     dimensionsGuard(widthPixel, heightPixel);
-    sb.write('/-/resize/${widthPixel}x${heightPixel}');
+    sb.write('/-/resize/${widthPixel}x$heightPixel');
     return this;
   }
 }

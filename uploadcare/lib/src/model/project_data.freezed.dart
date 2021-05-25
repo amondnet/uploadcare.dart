@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'project_data.dart';
 
@@ -9,6 +9,10 @@ part of 'project_data.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$ProjectDataTearOff {
   const _$ProjectDataTearOff();
 
@@ -20,16 +24,20 @@ class _$ProjectDataTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $ProjectData = _$ProjectDataTearOff();
 
+/// @nodoc
 mixin _$ProjectData {
-  String get name;
-  String get pubKey;
+  String get name => throw _privateConstructorUsedError;
+  String get pubKey => throw _privateConstructorUsedError;
 
-  $ProjectDataCopyWith<ProjectData> get copyWith;
+  @JsonKey(ignore: true)
+  $ProjectDataCopyWith<ProjectData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ProjectDataCopyWith<$Res> {
   factory $ProjectDataCopyWith(
           ProjectData value, $Res Function(ProjectData) then) =
@@ -37,6 +45,7 @@ abstract class $ProjectDataCopyWith<$Res> {
   $Res call({String name, String pubKey});
 }
 
+/// @nodoc
 class _$ProjectDataCopyWithImpl<$Res> implements $ProjectDataCopyWith<$Res> {
   _$ProjectDataCopyWithImpl(this._value, this._then);
 
@@ -46,16 +55,23 @@ class _$ProjectDataCopyWithImpl<$Res> implements $ProjectDataCopyWith<$Res> {
 
   @override
   $Res call({
-    Object name = freezed,
-    Object pubKey = freezed,
+    Object? name = freezed,
+    Object? pubKey = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      pubKey: pubKey == freezed ? _value.pubKey : pubKey as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      pubKey: pubKey == freezed
+          ? _value.pubKey
+          : pubKey // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$ProjectDataCopyWith<$Res>
     implements $ProjectDataCopyWith<$Res> {
   factory _$ProjectDataCopyWith(
@@ -65,6 +81,7 @@ abstract class _$ProjectDataCopyWith<$Res>
   $Res call({String name, String pubKey});
 }
 
+/// @nodoc
 class __$ProjectDataCopyWithImpl<$Res> extends _$ProjectDataCopyWithImpl<$Res>
     implements _$ProjectDataCopyWith<$Res> {
   __$ProjectDataCopyWithImpl(
@@ -76,20 +93,26 @@ class __$ProjectDataCopyWithImpl<$Res> extends _$ProjectDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object pubKey = freezed,
+    Object? name = freezed,
+    Object? pubKey = freezed,
   }) {
     return _then(_ProjectData(
-      name == freezed ? _value.name : name as String,
-      pubKey == freezed ? _value.pubKey : pubKey as String,
+      name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      pubKey == freezed
+          ? _value.pubKey
+          : pubKey // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$_ProjectData implements _ProjectData {
-  _$_ProjectData(this.name, this.pubKey)
-      : assert(name != null),
-        assert(pubKey != null);
+  _$_ProjectData(this.name, this.pubKey);
 
   @override
   final String name;
@@ -117,6 +140,7 @@ class _$_ProjectData implements _ProjectData {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(pubKey);
 
+  @JsonKey(ignore: true)
   @override
   _$ProjectDataCopyWith<_ProjectData> get copyWith =>
       __$ProjectDataCopyWithImpl<_ProjectData>(this, _$identity);
@@ -126,13 +150,16 @@ abstract class _ProjectData implements ProjectData {
   factory _ProjectData(String name, String pubKey) = _$_ProjectData;
 
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get pubKey;
+  String get pubKey => throw _privateConstructorUsedError;
   @override
-  _$ProjectDataCopyWith<_ProjectData> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProjectDataCopyWith<_ProjectData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$CollaboratorDataTearOff {
   const _$CollaboratorDataTearOff();
 
@@ -144,16 +171,20 @@ class _$CollaboratorDataTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $CollaboratorData = _$CollaboratorDataTearOff();
 
+/// @nodoc
 mixin _$CollaboratorData {
-  String get name;
-  String get email;
+  String get name => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
 
-  $CollaboratorDataCopyWith<CollaboratorData> get copyWith;
+  @JsonKey(ignore: true)
+  $CollaboratorDataCopyWith<CollaboratorData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $CollaboratorDataCopyWith<$Res> {
   factory $CollaboratorDataCopyWith(
           CollaboratorData value, $Res Function(CollaboratorData) then) =
@@ -161,6 +192,7 @@ abstract class $CollaboratorDataCopyWith<$Res> {
   $Res call({String name, String email});
 }
 
+/// @nodoc
 class _$CollaboratorDataCopyWithImpl<$Res>
     implements $CollaboratorDataCopyWith<$Res> {
   _$CollaboratorDataCopyWithImpl(this._value, this._then);
@@ -171,16 +203,23 @@ class _$CollaboratorDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object email = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      email: email == freezed ? _value.email : email as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$CollaboratorDataCopyWith<$Res>
     implements $CollaboratorDataCopyWith<$Res> {
   factory _$CollaboratorDataCopyWith(
@@ -190,6 +229,7 @@ abstract class _$CollaboratorDataCopyWith<$Res>
   $Res call({String name, String email});
 }
 
+/// @nodoc
 class __$CollaboratorDataCopyWithImpl<$Res>
     extends _$CollaboratorDataCopyWithImpl<$Res>
     implements _$CollaboratorDataCopyWith<$Res> {
@@ -202,20 +242,26 @@ class __$CollaboratorDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object email = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
   }) {
     return _then(_CollaboratorData(
-      name == freezed ? _value.name : name as String,
-      email == freezed ? _value.email : email as String,
+      name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$_CollaboratorData implements _CollaboratorData {
-  const _$_CollaboratorData(this.name, this.email)
-      : assert(name != null),
-        assert(email != null);
+  const _$_CollaboratorData(this.name, this.email);
 
   @override
   final String name;
@@ -243,6 +289,7 @@ class _$_CollaboratorData implements _CollaboratorData {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   _$CollaboratorDataCopyWith<_CollaboratorData> get copyWith =>
       __$CollaboratorDataCopyWithImpl<_CollaboratorData>(this, _$identity);
@@ -253,9 +300,11 @@ abstract class _CollaboratorData implements CollaboratorData {
       _$_CollaboratorData;
 
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
-  _$CollaboratorDataCopyWith<_CollaboratorData> get copyWith;
+  @JsonKey(ignore: true)
+  _$CollaboratorDataCopyWith<_CollaboratorData> get copyWith =>
+      throw _privateConstructorUsedError;
 }

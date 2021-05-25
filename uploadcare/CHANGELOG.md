@@ -1,3 +1,8 @@
+## 1.0.0
+
+- fix: dimensionGuard
+- feat: null safety
+
 ## 0.2.0
 
 - cdn client

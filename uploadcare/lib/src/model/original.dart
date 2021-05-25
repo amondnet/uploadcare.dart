@@ -4,7 +4,7 @@ part 'original.freezed.dart';
 part 'original.g.dart';
 
 @freezed
-abstract class Original implements _$Original {
+class Original with _$Original {
   const Original._();
 
   const factory Original(
@@ -15,7 +15,6 @@ abstract class Original implements _$Original {
       int height,
       int width) = _Original;
 
-  factory Original.fromJson(Map<String, dynamic> json) {
-    return _$OriginalFromJson(json);
-  }
+  factory Original.fromJson(Map<String, dynamic> json) =>
+      _$OriginalFromJson(json);
 }

@@ -6,7 +6,7 @@ void main() {
   group('CdnPathBuilder', () {
     final FILE_ID = '27c7846b-a019-4516-a5e4-de635f822161';
 
-    CdnPathBuilder builder;
+    late CdnPathBuilder builder;
 
     setUp(() {
       File file = MockFile();
@@ -71,12 +71,12 @@ void main() {
 
     test('dimensionGuard Test', () {
       builder.resizeWidth(1);
-      builder.resizeWidth(5000);
+      builder.resizeWidth(2048);
       try {
         builder.resizeWidth(0);
       } catch (e1) {
         try {
-          builder.resizeWidth(5001);
+          builder.resizeWidth(2049);
         } catch (e2) {
           return;
         }

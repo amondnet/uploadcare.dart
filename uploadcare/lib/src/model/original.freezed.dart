@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'original.dart';
 
@@ -8,10 +8,15 @@ part of 'original.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Original _$OriginalFromJson(Map<String, dynamic> json) {
   return _Original.fromJson(json);
 }
 
+/// @nodoc
 class _$OriginalTearOff {
   const _$OriginalTearOff();
 
@@ -26,24 +31,32 @@ class _$OriginalTearOff {
       width,
     );
   }
+
+  Original fromJson(Map<String, Object> json) {
+    return Original.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Original = _$OriginalTearOff();
 
+/// @nodoc
 mixin _$Original {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'color_mode')
-  String get colorMode;
-  String get format;
-  bool get sequence;
-  int get height;
-  int get width;
+  String get colorMode => throw _privateConstructorUsedError;
+  String get format => throw _privateConstructorUsedError;
+  bool get sequence => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $OriginalCopyWith<Original> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $OriginalCopyWith<Original> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $OriginalCopyWith<$Res> {
   factory $OriginalCopyWith(Original value, $Res Function(Original) then) =
       _$OriginalCopyWithImpl<$Res>;
@@ -56,6 +69,7 @@ abstract class $OriginalCopyWith<$Res> {
       int width});
 }
 
+/// @nodoc
 class _$OriginalCopyWithImpl<$Res> implements $OriginalCopyWith<$Res> {
   _$OriginalCopyWithImpl(this._value, this._then);
 
@@ -65,24 +79,43 @@ class _$OriginalCopyWithImpl<$Res> implements $OriginalCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object colorMode = freezed,
-    Object format = freezed,
-    Object sequence = freezed,
-    Object height = freezed,
-    Object width = freezed,
+    Object? id = freezed,
+    Object? colorMode = freezed,
+    Object? format = freezed,
+    Object? sequence = freezed,
+    Object? height = freezed,
+    Object? width = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      colorMode: colorMode == freezed ? _value.colorMode : colorMode as String,
-      format: format == freezed ? _value.format : format as String,
-      sequence: sequence == freezed ? _value.sequence : sequence as bool,
-      height: height == freezed ? _value.height : height as int,
-      width: width == freezed ? _value.width : width as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      colorMode: colorMode == freezed
+          ? _value.colorMode
+          : colorMode // ignore: cast_nullable_to_non_nullable
+              as String,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as bool,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$OriginalCopyWith<$Res> implements $OriginalCopyWith<$Res> {
   factory _$OriginalCopyWith(_Original value, $Res Function(_Original) then) =
       __$OriginalCopyWithImpl<$Res>;
@@ -96,6 +129,7 @@ abstract class _$OriginalCopyWith<$Res> implements $OriginalCopyWith<$Res> {
       int width});
 }
 
+/// @nodoc
 class __$OriginalCopyWithImpl<$Res> extends _$OriginalCopyWithImpl<$Res>
     implements _$OriginalCopyWith<$Res> {
   __$OriginalCopyWithImpl(_Original _value, $Res Function(_Original) _then)
@@ -106,35 +140,48 @@ class __$OriginalCopyWithImpl<$Res> extends _$OriginalCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object colorMode = freezed,
-    Object format = freezed,
-    Object sequence = freezed,
-    Object height = freezed,
-    Object width = freezed,
+    Object? id = freezed,
+    Object? colorMode = freezed,
+    Object? format = freezed,
+    Object? sequence = freezed,
+    Object? height = freezed,
+    Object? width = freezed,
   }) {
     return _then(_Original(
-      id == freezed ? _value.id : id as String,
-      colorMode == freezed ? _value.colorMode : colorMode as String,
-      format == freezed ? _value.format : format as String,
-      sequence == freezed ? _value.sequence : sequence as bool,
-      height == freezed ? _value.height : height as int,
-      width == freezed ? _value.width : width as int,
+      id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      colorMode == freezed
+          ? _value.colorMode
+          : colorMode // ignore: cast_nullable_to_non_nullable
+              as String,
+      format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as bool,
+      height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 class _$_Original extends _Original {
   const _$_Original(this.id, @JsonKey(name: 'color_mode') this.colorMode,
       this.format, this.sequence, this.height, this.width)
-      : assert(id != null),
-        assert(colorMode != null),
-        assert(format != null),
-        assert(sequence != null),
-        assert(height != null),
-        assert(width != null),
-        super._();
+      : super._();
 
   factory _$_Original.fromJson(Map<String, dynamic> json) =>
       _$_$_OriginalFromJson(json);
@@ -188,6 +235,7 @@ class _$_Original extends _Original {
       const DeepCollectionEquality().hash(height) ^
       const DeepCollectionEquality().hash(width);
 
+  @JsonKey(ignore: true)
   @override
   _$OriginalCopyWith<_Original> get copyWith =>
       __$OriginalCopyWithImpl<_Original>(this, _$identity);
@@ -199,7 +247,6 @@ class _$_Original extends _Original {
 }
 
 abstract class _Original extends Original {
-  const _Original._() : super._();
   const factory _Original(
       String id,
       @JsonKey(name: 'color_mode') String colorMode,
@@ -207,22 +254,25 @@ abstract class _Original extends Original {
       bool sequence,
       int height,
       int width) = _$_Original;
+  const _Original._() : super._();
 
   factory _Original.fromJson(Map<String, dynamic> json) = _$_Original.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'color_mode')
-  String get colorMode;
+  String get colorMode => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  bool get sequence;
+  bool get sequence => throw _privateConstructorUsedError;
   @override
-  int get height;
+  int get height => throw _privateConstructorUsedError;
   @override
-  int get width;
+  int get width => throw _privateConstructorUsedError;
   @override
-  _$OriginalCopyWith<_Original> get copyWith;
+  @JsonKey(ignore: true)
+  _$OriginalCopyWith<_Original> get copyWith =>
+      throw _privateConstructorUsedError;
 }

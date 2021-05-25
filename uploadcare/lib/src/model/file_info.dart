@@ -7,7 +7,7 @@ part 'file_info.freezed.dart';
 part 'file_info.g.dart';
 
 @freezed
-abstract class FileInfo implements _$FileInfo {
+class FileInfo with _$FileInfo {
   const FileInfo._();
 
   const factory FileInfo(

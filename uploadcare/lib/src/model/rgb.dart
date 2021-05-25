@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'rgb.freezed.dart';
 
 @freezed
-abstract class RGB implements _$RGB {
+class RGB with _$RGB {
   RGB._();
 
   factory RGB(int r, int g, int b) = _RGB;

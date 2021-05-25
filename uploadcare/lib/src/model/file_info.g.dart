@@ -11,9 +11,7 @@ _$_FileInfo _$_$_FileInfoFromJson(Map<String, dynamic> json) {
     json['id'] as String,
     json['width'] as int,
     json['height'] as int,
-    json['original'] == null
-        ? null
-        : Original.fromJson(json['original'] as Map<String, dynamic>),
+    Original.fromJson(json['original'] as Map<String, dynamic>),
   );
 }
 
@@ -30,9 +28,7 @@ _$ColorRecognition _$_$ColorRecognitionFromJson(Map<String, dynamic> json) {
     json['id'] as String,
     json['width'] as int,
     json['height'] as int,
-    json['original'] == null
-        ? null
-        : Original.fromJson(json['original'] as Map<String, dynamic>),
+    Original.fromJson(json['original'] as Map<String, dynamic>),
     RGB.fromJsonArray(json['main_colors'] as List),
   );
 }

@@ -2,8 +2,11 @@ import 'file.dart';
 
 enum ImageFormat { JPEG, PNG, WEBP, AUTO }
 
+const MAX_DIMENSION = 3000;
+const MIN_DIMENSION = 1;
+
 extension on ImageFormat {
-  String get name {
+  String? get name {
     switch (this) {
       case ImageFormat.JPEG:
         return 'jpeg';
@@ -21,7 +24,7 @@ extension on ImageFormat {
 enum ImageQuality { NORMAL, BETTER, BEST, LIGHTER, LIGHTEST }
 
 extension on ImageQuality {
-  String get name {
+  String? get name {
     switch (this) {
       case ImageQuality.NORMAL:
         return 'normal';
@@ -45,23 +48,23 @@ class CdnPathBuilder {
   final StringBuffer sb = StringBuffer('/');
 
   /// Creates a new CDN path builder for some image file.
-  CdnPathBuilder(String fileId) {
+  CdnPathBuilder(String? fileId) {
     sb.write(fileId);
   }
 
   void dimensionGuard(int dim) {
-    if (dim < 1 || dim > 5000) {
-      throw Exception('Dimensions must be in the range 1-2048');
+    if (dim < MIN_DIMENSION || dim > MAX_DIMENSION) {
+      throw Exception('Dimensions must be in the range 1-3000');
     }
   }
 
   void dimensionsGuard(int width, int height) {
     dimensionGuard(width);
     dimensionGuard(height);
-    /*
-    if (width > 634 && height > 634) {
-      throw Exception('At least one dimension must be less than 634');
-    }*/
+
+    if (width > MAX_DIMENSION && height > MAX_DIMENSION) {
+      throw Exception('At least one dimension must be less than 3000');
+    }
   }
 
   /// Adds top-left-aligned crop.
@@ -202,7 +205,7 @@ class CdnPathBuilder {
   /// Performs Gaussian blur on result image.
   /// Strength is standard deviation (aka blur radius) multiplied by ten. Strength
   //  can be up to 5000. Default is 10.
-  CdnPathBuilder blur([int strength]) {
+  CdnPathBuilder blur([int? strength]) {
     sb.write('/-/blur');
     if (strength != null) {
       if (strength < 0 || strength > 5000) {
@@ -215,7 +218,7 @@ class CdnPathBuilder {
   }
 
   /// Performs sharpening on result image. This can be useful after scaling down.
-  CdnPathBuilder sharp([int strength]) {
+  CdnPathBuilder sharp([int? strength]) {
     sb.write('/-/sharp');
     if (strength != null) {
       if (strength < 0 || strength > 20) {
@@ -231,7 +234,7 @@ class CdnPathBuilder {
   ///
   /// @param width New width
   /// @param height New height
-  CdnPathBuilder preview([int width, int height]) {
+  CdnPathBuilder preview([int? width, int? height]) {
     sb.write('/-/preview/');
     if (width != null) {
       dimensionGuard(width);
@@ -247,7 +250,7 @@ class CdnPathBuilder {
     return this;
   }
 
-  CdnPathBuilder colorRecognition({int numberOfColors}) {
+  CdnPathBuilder colorRecognition({int? numberOfColors}) {
     sb.write('/-/main_colors/');
     if (numberOfColors != null && numberOfColors > 0) {
       sb.write(numberOfColors);
