@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'original.dart';
 
@@ -10,35 +12,11 @@ part of 'original.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Original _$OriginalFromJson(Map<String, dynamic> json) {
   return _Original.fromJson(json);
 }
-
-/// @nodoc
-class _$OriginalTearOff {
-  const _$OriginalTearOff();
-
-  _Original call(String id, @JsonKey(name: 'color_mode') String colorMode,
-      String format, bool sequence, int height, int width) {
-    return _Original(
-      id,
-      colorMode,
-      format,
-      sequence,
-      height,
-      width,
-    );
-  }
-
-  Original fromJson(Map<String, Object> json) {
-    return Original.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Original = _$OriginalTearOff();
 
 /// @nodoc
 mixin _$Original {
@@ -59,7 +37,8 @@ mixin _$Original {
 /// @nodoc
 abstract class $OriginalCopyWith<$Res> {
   factory $OriginalCopyWith(Original value, $Res Function(Original) then) =
-      _$OriginalCopyWithImpl<$Res>;
+      _$OriginalCopyWithImpl<$Res, Original>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'color_mode') String colorMode,
@@ -70,56 +49,61 @@ abstract class $OriginalCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OriginalCopyWithImpl<$Res> implements $OriginalCopyWith<$Res> {
+class _$OriginalCopyWithImpl<$Res, $Val extends Original>
+    implements $OriginalCopyWith<$Res> {
   _$OriginalCopyWithImpl(this._value, this._then);
 
-  final Original _value;
   // ignore: unused_field
-  final $Res Function(Original) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? colorMode = freezed,
-    Object? format = freezed,
-    Object? sequence = freezed,
-    Object? height = freezed,
-    Object? width = freezed,
+    Object? id = null,
+    Object? colorMode = null,
+    Object? format = null,
+    Object? sequence = null,
+    Object? height = null,
+    Object? width = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      colorMode: colorMode == freezed
+      colorMode: null == colorMode
           ? _value.colorMode
           : colorMode // ignore: cast_nullable_to_non_nullable
               as String,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      sequence: sequence == freezed
+      sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
               as bool,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$OriginalCopyWith<$Res> implements $OriginalCopyWith<$Res> {
-  factory _$OriginalCopyWith(_Original value, $Res Function(_Original) then) =
-      __$OriginalCopyWithImpl<$Res>;
+abstract class _$$_OriginalCopyWith<$Res> implements $OriginalCopyWith<$Res> {
+  factory _$$_OriginalCopyWith(
+          _$_Original value, $Res Function(_$_Original) then) =
+      __$$_OriginalCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'color_mode') String colorMode,
@@ -130,45 +114,45 @@ abstract class _$OriginalCopyWith<$Res> implements $OriginalCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$OriginalCopyWithImpl<$Res> extends _$OriginalCopyWithImpl<$Res>
-    implements _$OriginalCopyWith<$Res> {
-  __$OriginalCopyWithImpl(_Original _value, $Res Function(_Original) _then)
-      : super(_value, (v) => _then(v as _Original));
+class __$$_OriginalCopyWithImpl<$Res>
+    extends _$OriginalCopyWithImpl<$Res, _$_Original>
+    implements _$$_OriginalCopyWith<$Res> {
+  __$$_OriginalCopyWithImpl(
+      _$_Original _value, $Res Function(_$_Original) _then)
+      : super(_value, _then);
 
-  @override
-  _Original get _value => super._value as _Original;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? colorMode = freezed,
-    Object? format = freezed,
-    Object? sequence = freezed,
-    Object? height = freezed,
-    Object? width = freezed,
+    Object? id = null,
+    Object? colorMode = null,
+    Object? format = null,
+    Object? sequence = null,
+    Object? height = null,
+    Object? width = null,
   }) {
-    return _then(_Original(
-      id == freezed
+    return _then(_$_Original(
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      colorMode == freezed
+      null == colorMode
           ? _value.colorMode
           : colorMode // ignore: cast_nullable_to_non_nullable
               as String,
-      format == freezed
+      null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      sequence == freezed
+      null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
               as bool,
-      height == freezed
+      null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      width == freezed
+      null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
@@ -184,7 +168,7 @@ class _$_Original extends _Original {
       : super._();
 
   factory _$_Original.fromJson(Map<String, dynamic> json) =>
-      _$_$_OriginalFromJson(json);
+      _$$_OriginalFromJson(json);
 
   @override
   final String id;
@@ -208,71 +192,64 @@ class _$_Original extends _Original {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Original &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Original &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.colorMode, colorMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.colorMode, colorMode)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
+                other.colorMode == colorMode) &&
+            (identical(other.format, format) || other.format == format) &&
             (identical(other.sequence, sequence) ||
-                const DeepCollectionEquality()
-                    .equals(other.sequence, sequence)) &&
-            (identical(other.height, height) ||
-                const DeepCollectionEquality().equals(other.height, height)) &&
-            (identical(other.width, width) ||
-                const DeepCollectionEquality().equals(other.width, width)));
+                other.sequence == sequence) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.width, width) || other.width == width));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(colorMode) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(sequence) ^
-      const DeepCollectionEquality().hash(height) ^
-      const DeepCollectionEquality().hash(width);
 
   @JsonKey(ignore: true)
   @override
-  _$OriginalCopyWith<_Original> get copyWith =>
-      __$OriginalCopyWithImpl<_Original>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, id, colorMode, format, sequence, height, width);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OriginalCopyWith<_$_Original> get copyWith =>
+      __$$_OriginalCopyWithImpl<_$_Original>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OriginalToJson(this);
+    return _$$_OriginalToJson(
+      this,
+    );
   }
 }
 
 abstract class _Original extends Original {
   const factory _Original(
-      String id,
-      @JsonKey(name: 'color_mode') String colorMode,
-      String format,
-      bool sequence,
-      int height,
-      int width) = _$_Original;
+      final String id,
+      @JsonKey(name: 'color_mode') final String colorMode,
+      final String format,
+      final bool sequence,
+      final int height,
+      final int width) = _$_Original;
   const _Original._() : super._();
 
   factory _Original.fromJson(Map<String, dynamic> json) = _$_Original.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'color_mode')
-  String get colorMode => throw _privateConstructorUsedError;
+  String get colorMode;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  bool get sequence => throw _privateConstructorUsedError;
+  bool get sequence;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
   @JsonKey(ignore: true)
-  _$OriginalCopyWith<_Original> get copyWith =>
+  _$$_OriginalCopyWith<_$_Original> get copyWith =>
       throw _privateConstructorUsedError;
 }

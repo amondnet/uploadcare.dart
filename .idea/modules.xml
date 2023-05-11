@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/flutter_uploadcare/flutter_uploadcare.iml" filepath="$PROJECT_DIR$/flutter_uploadcare/flutter_uploadcare.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploadcare/uploadcare.iml" filepath="$PROJECT_DIR$/uploadcare/uploadcare.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploadcare.dart.iml" filepath="$PROJECT_DIR$/uploadcare.dart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploadcare_widget/uploadcare_widget.iml" filepath="$PROJECT_DIR$/uploadcare_widget/uploadcare_widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploadcare_widget/android/uploadcare_widget_android.iml" filepath="$PROJECT_DIR$/uploadcare_widget/android/uploadcare_widget_android.iml" />
     </modules>
   </component>
 </project>

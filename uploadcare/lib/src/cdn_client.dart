@@ -1,13 +1,15 @@
-import 'package:dio/dio.dart';
+import 'dart:convert';
+
+import 'package:http/http.dart' as $http;
 import 'package:uploadcare/src/cdn_path_builder.dart';
 import 'package:uploadcare/src/model/file_info.dart';
 
 class CdnClient {
-  final Dio _restio;
+  final $http.Client _client;
   final String baseUrl;
 
-  CdnClient({Dio? restio, this.baseUrl = 'https://ucarecdn.com'})
-      : _restio = restio ?? Dio(BaseOptions());
+  CdnClient({$http.Client? client, this.baseUrl = 'https://ucarecdn.com'})
+      : _client = client ?? $http.Client();
 
   Future<ColorRecognition?> colorRecognition(String fileId,
       {int numberOfColors = 4}) async {
@@ -15,15 +17,15 @@ class CdnClient {
         .preview()
         .colorRecognition(numberOfColors: numberOfColors)
         .build();
-    var response = await _restio.get('$baseUrl$path');
+    var response = await _client.get(Uri.parse('$baseUrl$path'));
     if (!response.isSuccessful) {
-      print('error : ${response.statusMessage}');
+      print('error : ${response.statusCode}');
       return null;
     }
-    return ColorRecognition.fromJson(response.data);
+    return ColorRecognition.fromJson(jsonDecode(response.body));
   }
 }
 
-extension on Response {
-  bool get isSuccessful => statusCode! >= 200 && statusCode! < 300;
+extension on $http.Response {
+  bool get isSuccessful => statusCode >= 200 && statusCode < 300;
 }

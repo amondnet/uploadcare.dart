@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'file_info.dart';
 
@@ -10,56 +12,20 @@ part of 'file_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FileInfo _$FileInfoFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType']) {
     case 'default':
       return _FileInfo.fromJson(json);
     case 'color':
       return ColorRecognition.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'FileInfo',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
-
-/// @nodoc
-class _$FileInfoTearOff {
-  const _$FileInfoTearOff();
-
-  _FileInfo call(String id, int width, int height, Original original) {
-    return _FileInfo(
-      id,
-      width,
-      height,
-      original,
-    );
-  }
-
-  ColorRecognition color(
-      String id,
-      int width,
-      int height,
-      Original original,
-      @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
-          List<RGB> mainColors) {
-    return ColorRecognition(
-      id,
-      width,
-      height,
-      original,
-      mainColors,
-    );
-  }
-
-  FileInfo fromJson(Map<String, Object> json) {
-    return FileInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FileInfo = _$FileInfoTearOff();
 
 /// @nodoc
 mixin _$FileInfo {
@@ -67,7 +33,6 @@ mixin _$FileInfo {
   int get width => throw _privateConstructorUsedError;
   int get height => throw _privateConstructorUsedError;
   Original get original => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(String id, int width, int height, Original original)
@@ -79,6 +44,20 @@ mixin _$FileInfo {
             Original original,
             @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
                 List<RGB> mainColors)
+        color,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String id, int width, int height, Original original)?
+        $default, {
+    TResult? Function(
+            String id,
+            int width,
+            int height,
+            Original original,
+            @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
+                List<RGB> mainColors)?
         color,
   }) =>
       throw _privateConstructorUsedError;
@@ -104,6 +83,12 @@ mixin _$FileInfo {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_FileInfo value)? $default, {
+    TResult? Function(ColorRecognition value)? color,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_FileInfo value)? $default, {
     TResult Function(ColorRecognition value)? color,
@@ -119,60 +104,67 @@ mixin _$FileInfo {
 /// @nodoc
 abstract class $FileInfoCopyWith<$Res> {
   factory $FileInfoCopyWith(FileInfo value, $Res Function(FileInfo) then) =
-      _$FileInfoCopyWithImpl<$Res>;
+      _$FileInfoCopyWithImpl<$Res, FileInfo>;
+  @useResult
   $Res call({String id, int width, int height, Original original});
 
   $OriginalCopyWith<$Res> get original;
 }
 
 /// @nodoc
-class _$FileInfoCopyWithImpl<$Res> implements $FileInfoCopyWith<$Res> {
+class _$FileInfoCopyWithImpl<$Res, $Val extends FileInfo>
+    implements $FileInfoCopyWith<$Res> {
   _$FileInfoCopyWithImpl(this._value, this._then);
 
-  final FileInfo _value;
   // ignore: unused_field
-  final $Res Function(FileInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? width = freezed,
-    Object? height = freezed,
-    Object? original = freezed,
+    Object? id = null,
+    Object? width = null,
+    Object? height = null,
+    Object? original = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      original: original == freezed
+      original: null == original
           ? _value.original
           : original // ignore: cast_nullable_to_non_nullable
               as Original,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $OriginalCopyWith<$Res> get original {
     return $OriginalCopyWith<$Res>(_value.original, (value) {
-      return _then(_value.copyWith(original: value));
+      return _then(_value.copyWith(original: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$FileInfoCopyWith<$Res> implements $FileInfoCopyWith<$Res> {
-  factory _$FileInfoCopyWith(_FileInfo value, $Res Function(_FileInfo) then) =
-      __$FileInfoCopyWithImpl<$Res>;
+abstract class _$$_FileInfoCopyWith<$Res> implements $FileInfoCopyWith<$Res> {
+  factory _$$_FileInfoCopyWith(
+          _$_FileInfo value, $Res Function(_$_FileInfo) then) =
+      __$$_FileInfoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, int width, int height, Original original});
 
   @override
@@ -180,35 +172,35 @@ abstract class _$FileInfoCopyWith<$Res> implements $FileInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$FileInfoCopyWithImpl<$Res> extends _$FileInfoCopyWithImpl<$Res>
-    implements _$FileInfoCopyWith<$Res> {
-  __$FileInfoCopyWithImpl(_FileInfo _value, $Res Function(_FileInfo) _then)
-      : super(_value, (v) => _then(v as _FileInfo));
+class __$$_FileInfoCopyWithImpl<$Res>
+    extends _$FileInfoCopyWithImpl<$Res, _$_FileInfo>
+    implements _$$_FileInfoCopyWith<$Res> {
+  __$$_FileInfoCopyWithImpl(
+      _$_FileInfo _value, $Res Function(_$_FileInfo) _then)
+      : super(_value, _then);
 
-  @override
-  _FileInfo get _value => super._value as _FileInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? width = freezed,
-    Object? height = freezed,
-    Object? original = freezed,
+    Object? id = null,
+    Object? width = null,
+    Object? height = null,
+    Object? original = null,
   }) {
-    return _then(_FileInfo(
-      id == freezed
+    return _then(_$_FileInfo(
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      width == freezed
+      null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      height == freezed
+      null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      original == freezed
+      null == original
           ? _value.original
           : original // ignore: cast_nullable_to_non_nullable
               as Original,
@@ -219,11 +211,13 @@ class __$FileInfoCopyWithImpl<$Res> extends _$FileInfoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FileInfo extends _FileInfo {
-  const _$_FileInfo(this.id, this.width, this.height, this.original)
-      : super._();
+  const _$_FileInfo(this.id, this.width, this.height, this.original,
+      {final String? $type})
+      : $type = $type ?? 'default',
+        super._();
 
   factory _$_FileInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_FileInfoFromJson(json);
+      _$$_FileInfoFromJson(json);
 
   @override
   final String id;
@@ -234,6 +228,9 @@ class _$_FileInfo extends _FileInfo {
   @override
   final Original original;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FileInfo(id: $id, width: $width, height: $height, original: $original)';
@@ -242,30 +239,24 @@ class _$_FileInfo extends _FileInfo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FileInfo &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.width, width) ||
-                const DeepCollectionEquality().equals(other.width, width)) &&
-            (identical(other.height, height) ||
-                const DeepCollectionEquality().equals(other.height, height)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FileInfo &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
             (identical(other.original, original) ||
-                const DeepCollectionEquality()
-                    .equals(other.original, original)));
+                other.original == original));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(width) ^
-      const DeepCollectionEquality().hash(height) ^
-      const DeepCollectionEquality().hash(original);
 
   @JsonKey(ignore: true)
   @override
-  _$FileInfoCopyWith<_FileInfo> get copyWith =>
-      __$FileInfoCopyWithImpl<_FileInfo>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, width, height, original);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_FileInfoCopyWith<_$_FileInfo> get copyWith =>
+      __$$_FileInfoCopyWithImpl<_$_FileInfo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -282,6 +273,23 @@ class _$_FileInfo extends _FileInfo {
         color,
   }) {
     return $default(id, width, height, original);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String id, int width, int height, Original original)?
+        $default, {
+    TResult? Function(
+            String id,
+            int width,
+            int height,
+            Original original,
+            @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
+                List<RGB> mainColors)?
+        color,
+  }) {
+    return $default?.call(id, width, height, original);
   }
 
   @override
@@ -316,6 +324,15 @@ class _$_FileInfo extends _FileInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_FileInfo value)? $default, {
+    TResult? Function(ColorRecognition value)? color,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_FileInfo value)? $default, {
     TResult Function(ColorRecognition value)? color,
@@ -329,38 +346,41 @@ class _$_FileInfo extends _FileInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FileInfoToJson(this)..['runtimeType'] = 'default';
+    return _$$_FileInfoToJson(
+      this,
+    );
   }
 }
 
 abstract class _FileInfo extends FileInfo {
-  const factory _FileInfo(String id, int width, int height, Original original) =
-      _$_FileInfo;
+  const factory _FileInfo(final String id, final int width, final int height,
+      final Original original) = _$_FileInfo;
   const _FileInfo._() : super._();
 
   factory _FileInfo.fromJson(Map<String, dynamic> json) = _$_FileInfo.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
-  Original get original => throw _privateConstructorUsedError;
+  Original get original;
   @override
   @JsonKey(ignore: true)
-  _$FileInfoCopyWith<_FileInfo> get copyWith =>
+  _$$_FileInfoCopyWith<_$_FileInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ColorRecognitionCopyWith<$Res>
+abstract class _$$ColorRecognitionCopyWith<$Res>
     implements $FileInfoCopyWith<$Res> {
-  factory $ColorRecognitionCopyWith(
-          ColorRecognition value, $Res Function(ColorRecognition) then) =
-      _$ColorRecognitionCopyWithImpl<$Res>;
+  factory _$$ColorRecognitionCopyWith(
+          _$ColorRecognition value, $Res Function(_$ColorRecognition) then) =
+      __$$ColorRecognitionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       int width,
@@ -374,42 +394,41 @@ abstract class $ColorRecognitionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ColorRecognitionCopyWithImpl<$Res> extends _$FileInfoCopyWithImpl<$Res>
-    implements $ColorRecognitionCopyWith<$Res> {
-  _$ColorRecognitionCopyWithImpl(
-      ColorRecognition _value, $Res Function(ColorRecognition) _then)
-      : super(_value, (v) => _then(v as ColorRecognition));
+class __$$ColorRecognitionCopyWithImpl<$Res>
+    extends _$FileInfoCopyWithImpl<$Res, _$ColorRecognition>
+    implements _$$ColorRecognitionCopyWith<$Res> {
+  __$$ColorRecognitionCopyWithImpl(
+      _$ColorRecognition _value, $Res Function(_$ColorRecognition) _then)
+      : super(_value, _then);
 
-  @override
-  ColorRecognition get _value => super._value as ColorRecognition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? width = freezed,
-    Object? height = freezed,
-    Object? original = freezed,
-    Object? mainColors = freezed,
+    Object? id = null,
+    Object? width = null,
+    Object? height = null,
+    Object? original = null,
+    Object? mainColors = null,
   }) {
-    return _then(ColorRecognition(
-      id == freezed
+    return _then(_$ColorRecognition(
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      width == freezed
+      null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      height == freezed
+      null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      original == freezed
+      null == original
           ? _value.original
           : original // ignore: cast_nullable_to_non_nullable
               as Original,
-      mainColors == freezed
-          ? _value.mainColors
+      null == mainColors
+          ? _value._mainColors
           : mainColors // ignore: cast_nullable_to_non_nullable
               as List<RGB>,
     ));
@@ -425,11 +444,14 @@ class _$ColorRecognition extends ColorRecognition {
       this.height,
       this.original,
       @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
-          this.mainColors)
-      : super._();
+          final List<RGB> mainColors,
+      {final String? $type})
+      : _mainColors = mainColors,
+        $type = $type ?? 'color',
+        super._();
 
   factory _$ColorRecognition.fromJson(Map<String, dynamic> json) =>
-      _$_$ColorRecognitionFromJson(json);
+      _$$ColorRecognitionFromJson(json);
 
   @override
   final String id;
@@ -439,9 +461,17 @@ class _$ColorRecognition extends ColorRecognition {
   final int height;
   @override
   final Original original;
+  final List<RGB> _mainColors;
   @override
   @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
-  final List<RGB> mainColors;
+  List<RGB> get mainColors {
+    if (_mainColors is EqualUnmodifiableListView) return _mainColors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_mainColors);
+  }
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -451,34 +481,27 @@ class _$ColorRecognition extends ColorRecognition {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ColorRecognition &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.width, width) ||
-                const DeepCollectionEquality().equals(other.width, width)) &&
-            (identical(other.height, height) ||
-                const DeepCollectionEquality().equals(other.height, height)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ColorRecognition &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
             (identical(other.original, original) ||
-                const DeepCollectionEquality()
-                    .equals(other.original, original)) &&
-            (identical(other.mainColors, mainColors) ||
-                const DeepCollectionEquality()
-                    .equals(other.mainColors, mainColors)));
+                other.original == original) &&
+            const DeepCollectionEquality()
+                .equals(other._mainColors, _mainColors));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(width) ^
-      const DeepCollectionEquality().hash(height) ^
-      const DeepCollectionEquality().hash(original) ^
-      const DeepCollectionEquality().hash(mainColors);
 
   @JsonKey(ignore: true)
   @override
-  $ColorRecognitionCopyWith<ColorRecognition> get copyWith =>
-      _$ColorRecognitionCopyWithImpl<ColorRecognition>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, width, height, original,
+      const DeepCollectionEquality().hash(_mainColors));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ColorRecognitionCopyWith<_$ColorRecognition> get copyWith =>
+      __$$ColorRecognitionCopyWithImpl<_$ColorRecognition>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -495,6 +518,23 @@ class _$ColorRecognition extends ColorRecognition {
         color,
   }) {
     return color(id, width, height, original, mainColors);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String id, int width, int height, Original original)?
+        $default, {
+    TResult? Function(
+            String id,
+            int width,
+            int height,
+            Original original,
+            @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
+                List<RGB> mainColors)?
+        color,
+  }) {
+    return color?.call(id, width, height, original, mainColors);
   }
 
   @override
@@ -529,6 +569,15 @@ class _$ColorRecognition extends ColorRecognition {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_FileInfo value)? $default, {
+    TResult? Function(ColorRecognition value)? color,
+  }) {
+    return color?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_FileInfo value)? $default, {
     TResult Function(ColorRecognition value)? color,
@@ -542,35 +591,37 @@ class _$ColorRecognition extends ColorRecognition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ColorRecognitionToJson(this)..['runtimeType'] = 'color';
+    return _$$ColorRecognitionToJson(
+      this,
+    );
   }
 }
 
 abstract class ColorRecognition extends FileInfo {
   const factory ColorRecognition(
-      String id,
-      int width,
-      int height,
-      Original original,
+      final String id,
+      final int width,
+      final int height,
+      final Original original,
       @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
-          List<RGB> mainColors) = _$ColorRecognition;
+          final List<RGB> mainColors) = _$ColorRecognition;
   const ColorRecognition._() : super._();
 
   factory ColorRecognition.fromJson(Map<String, dynamic> json) =
       _$ColorRecognition.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
-  Original get original => throw _privateConstructorUsedError;
+  Original get original;
   @JsonKey(name: 'main_colors', fromJson: RGB.fromJsonArray)
-  List<RGB> get mainColors => throw _privateConstructorUsedError;
+  List<RGB> get mainColors;
   @override
   @JsonKey(ignore: true)
-  $ColorRecognitionCopyWith<ColorRecognition> get copyWith =>
+  _$$ColorRecognitionCopyWith<_$ColorRecognition> get copyWith =>
       throw _privateConstructorUsedError;
 }
